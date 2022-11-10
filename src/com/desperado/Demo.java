@@ -2,6 +2,7 @@ package com.desperado;
 
 /**
  * 线程终止 --- 不正确的线程终止 -stop
+ *              正确的线程终止 -interrupt
  */
 public class Demo {
     int i = 0;
@@ -16,7 +17,11 @@ public class Demo {
             e.printStackTrace();
         }
         //终止线程
-        thread.stop();
+        //thread.stop();
+        thread.interrupt();
+        while(thread.isAlive()){
+
+        }
         thread.print();
 
 
