@@ -1,4 +1,4 @@
-package com.desperado.jvm;
+package com.desperado.jmm;
 
 /**             32位jdk       64位jdk
  *  -server     不打印i的值    不打印i的值
@@ -6,7 +6,7 @@ package com.desperado.jvm;
  */
 public class DemoVisibility {
     int i=0;
-    public boolean isRunning =true;
+    public volatile  boolean isRunning =true;
 
     public static void main(String[] args) throws InterruptedException {
         DemoVisibility demoVisibility = new DemoVisibility();
