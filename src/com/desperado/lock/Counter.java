@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Counter {
 
     volatile  int i =0;
-    Lock lock=new Desperado();
+    Lock lock=new Desperado2();
     public  void add(){
         lock.lock();
         try{
